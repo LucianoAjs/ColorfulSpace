@@ -2,6 +2,7 @@
 package com.example.espacocolorido
 
 import android.annotation.SuppressLint
+import android.content.Intent
 
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -75,6 +76,11 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                 } else if (clicked == 0) {
                     turnOver = false
                 }
+            }
+            imagevoltar6.setOnClickListener {
+
+                val intent = Intent(this, MenuAcitivity::class.java)
+                startActivity(intent)
             }
         }
     }
