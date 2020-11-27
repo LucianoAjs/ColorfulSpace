@@ -37,7 +37,7 @@
         android:id="@+id/nomeTextFruta"
         android:layout_width="330dp"
         android:layout_height="28dp"
-        android:background="#F8F6F6"
+        android:background="#00F8F6F6"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -124,14 +124,12 @@
         android:id="@+id/imagevermelhoEscolha"
         android:layout_width="106dp"
         android:layout_height="85dp"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageverdeEscolha"
-        app:layout_constraintTop_toTopOf="@+id/imageLaranjaEscolha"
-        app:layout_constraintVertical_bias="0.008"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806"
         app:srcCompat="@drawable/vermelho" />
 
     <Button

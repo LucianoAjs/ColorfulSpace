@@ -39,7 +39,7 @@
         android:id="@+id/nomeTextFruta2"
         android:layout_width="330dp"
         android:layout_height="28dp"
-        android:background="#2979FF"
+        android:background="#002979FF"
         android:textAlignment="center"
         android:textColor="#100C0C"
         android:textSize="20sp"
