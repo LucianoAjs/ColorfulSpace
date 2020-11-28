@@ -19,7 +19,7 @@ class ResultadoDaEscolhaActivity : AppCompatActivity() {
         var verde: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.verde)
         var roxo: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.roxo)
         var laranja: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.laranja)
-        var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.correto)
+
         var acertou: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.parabensvocacertou)
 
         val dadosResul: Bundle? = intent.extras
@@ -76,12 +76,8 @@ class ResultadoDaEscolhaActivity : AppCompatActivity() {
             nomeCorResultadoMusic.setBackgroundResource(R.drawable.vermelhomusic2)
             vermelho2 = true
             acertou?.start()
-        } else {
-            mediaPlayer?.start()
-            var intent = Intent(this, DesenhosActivity::class.java)
-            startActivity(intent)
-
         }
+
         nomeCorResultadoMusic.setOnClickListener {
             if (amarelo2) {
                 amarelo?.start()

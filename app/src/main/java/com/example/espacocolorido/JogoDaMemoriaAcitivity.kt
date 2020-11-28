@@ -3,20 +3,28 @@ package com.example.espacocolorido
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.icu.util.Output
 
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.versionedparcelable.ParcelUtils
 import com.example.espacocolorido.R.drawable.*
 import kotlinx.android.synthetic.main.activity_jogo_da_memoria_acitivity.*
+import kotlinx.android.synthetic.main.activity_jogo_da_memoria_acitivity.view.*
 
 class JogoDaMemoriaAcitivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.correto)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jogo_da_memoria_acitivity)
+
         var buttonTela2 = arrayListOf<Button>()
         val images: MutableList<Int> = mutableListOf(
                 amarelo,
@@ -32,12 +40,10 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                 vermelho,
                 verde
         )
-
         val buttons = arrayOf(
                 button, button1, button2, button3, button4, button5, button6,
                 button7, button8, button9, button10, button11
         )
-
 
         val cardBack = cinza
         var clicked = 0
@@ -77,6 +83,7 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                     turnOver = false
                 }
             }
+
             imagevoltar6.setOnClickListener {
 
                 val intent = Intent(this, MenuAcitivity::class.java)
@@ -84,4 +91,12 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
             }
         }
     }
+
+
+
+
 }
+
+
+
+
