@@ -9,6 +9,7 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.versionedparcelable.ParcelUtils
 import com.example.espacocolorido.R.drawable.*
@@ -21,6 +22,7 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        val toast = Toast.makeText(applicationContext, "Parabens voce ganhou :)", Toast.LENGTH_LONG)
         var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.correto)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jogo_da_memoria_acitivity)
@@ -49,6 +51,7 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
         var clicked = 0
         var turnOver = false
         var lastClicked = -1
+        var count =0
 
         images.shuffle()
         for (i in 0..11) {
@@ -78,12 +81,16 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                         turnOver = false
                         clicked = 0
                         mediaPlayer?.start()
+                        count = count + 1
+
                     }
                 } else if (clicked == 0) {
                     turnOver = false
                 }
+                if(count  == 6){
+                    toast.show()
+                }
             }
-
             imagevoltar6.setOnClickListener {
 
                 val intent = Intent(this, MenuAcitivity::class.java)
