@@ -3,25 +3,20 @@ package com.example.espacocolorido
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.icu.util.Output
-
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.versionedparcelable.ParcelUtils
 import com.example.espacocolorido.R.drawable.*
 import kotlinx.android.synthetic.main.activity_jogo_da_memoria_acitivity.*
-import kotlinx.android.synthetic.main.activity_jogo_da_memoria_acitivity.view.*
+
 
 class JogoDaMemoriaAcitivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         val toast = Toast.makeText(applicationContext, "Parabens voce ganhou :)", Toast.LENGTH_LONG)
         var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.correto)
         super.onCreate(savedInstanceState)
@@ -42,7 +37,7 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                 vermelho,
                 verde
         )
-        val buttons = arrayOf(
+        var buttons = arrayOf(
                 button, button1, button2, button3, button4, button5, button6,
                 button7, button8, button9, button10, button11
         )
@@ -81,7 +76,7 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                         turnOver = false
                         clicked = 0
                         mediaPlayer?.start()
-                        count = count + 1
+                        count += 1
 
                     }
                 } else if (clicked == 0) {
@@ -97,12 +92,15 @@ class JogoDaMemoriaAcitivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
     }
 
 
 
 
 }
+
+
 
 
 

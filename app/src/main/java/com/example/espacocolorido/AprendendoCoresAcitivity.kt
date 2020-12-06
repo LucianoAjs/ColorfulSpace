@@ -1,13 +1,11 @@
 package com.example.espacocolorido
 
-import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.R.raw.*
 import android.content.Intent
+import android.media.MediaPlayer
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_aprendendo_cores_acitivity.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_menu_acitivity.*
+
 
 class AprendendoCoresAcitivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

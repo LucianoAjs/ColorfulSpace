@@ -1,9 +1,10 @@
 package com.example.espacocolorido
 
-import android.R.*
 import android.content.Intent
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
@@ -16,8 +17,10 @@ class EscolhaACorAcitivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_colorindo_acitivity)
 
-        val toast = Toast.makeText(applicationContext, "Tente Novamente", LENGTH_SHORT)
-
+        val toast = Toast.makeText(this, "Tente Novamente", LENGTH_SHORT)
+        toast.view?.findViewById<TextView>(android.R.id.message)?.setTextColor(Color.RED)
+        val layout = layoutInflater.inflate(R.layout.toast_layout, null)
+        toast.view=layout
 
         var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.correto)
         var Melancia: Boolean? = null
@@ -120,12 +123,7 @@ class EscolhaACorAcitivity : AppCompatActivity() {
             }else{
                 mediaPlayer?.start()
                 toast.show()
-
-
             }
-
-
-
         }
         imageLaranjaEscolha.setOnClickListener {
 
@@ -184,11 +182,11 @@ class EscolhaACorAcitivity : AppCompatActivity() {
 
         }
 
-
-
-
-
     }
+    private fun toast(str: String){
+        Toast.makeText(applicationContext, "Tente Novamente", LENGTH_SHORT).show()
+    }
+
 
 }
 

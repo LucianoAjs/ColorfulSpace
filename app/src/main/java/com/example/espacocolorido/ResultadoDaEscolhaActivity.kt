@@ -2,11 +2,8 @@ package com.example.espacocolorido
 
 import android.content.Intent
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_colorindo_acitivity.*
-import kotlinx.android.synthetic.main.activity_colorindo_acitivity.nomeImageFruta
-import kotlinx.android.synthetic.main.activity_combinacao_cores_acitivity.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_resultado_da_escolha.*
 
 class ResultadoDaEscolhaActivity : AppCompatActivity() {
